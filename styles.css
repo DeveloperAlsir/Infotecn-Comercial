@@ -1,0 +1,448 @@
+/*------------------- Estilos base -------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*------------------- Estilos Menu navegacion -------------------*/
+
+.navegacion{
+    width: 90%;
+    max-width: auto;
+    position: relative;
+    margin: 25px auto;
+    padding: 10px 40px;
+}
+
+.menu_navegacion{
+    display: inline-block;
+    color: #2551be;
+    font-size: 15px;
+    text-decoration: none;
+    border: 2px solid #96be25;
+    box-shadow: 0 2px 10px #96be25;
+    border-radius: 4px;
+    padding: 10px 40px;
+}
+
+.menu_navegacion:hover{
+    background: #96be25;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*------------------- Estilos body -------------------*/
+
+body{
+    background-color: #fff;
+    color: #000;
+}
+
+/*------------------- Estilos cabeCera -------------------*/
+
+.cabecera {
+    width: 90%;
+    max-width: auto;
+    color: #2551be;
+    font-size: 25px;
+    position: relative;
+    margin: 25px auto;
+    padding: 10px 40px;
+}
+
+/*------------------- Estilos imagenes -------------------*/
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/*------------------- Estilos titulos -------------------*/
+
+h1 {
+    /*padding-left: auto;*/
+    text-align: center;
+    font-style: italic;
+    color: #2551be;
+    font: bold;
+}
+
+h2 {
+    text-align: center;
+    font-style: italic;
+    margin: 10px;
+    color: #2551be;
+    font: bold;
+}
+
+/*------------------- Estilos subtitulos -------------------*/
+
+.subtitulos {
+    width: 90%;
+    max-width: auto;
+    position: relative;
+    margin: 20px auto;
+    padding: 10px 40px;
+    border: 2px solid #96be25;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #96be25;
+}
+
+.input_subtitulos{
+    position: relative;
+    margin: 10px 0 0 0;
+    width: 100%;
+    background: transparent;
+    border-color: transparent;
+    border-bottom:1px solid #2551be;
+    border-right: none;
+    color: #000;
+    font-size: 17px;
+    outline: none;
+    line-height: 25px;
+    padding: 0 10px;
+    transition: all 1s;
+}
+
+.label_subtitulos{
+    display: block;
+    padding: 10px 0;
+    color: #2551be;
+}
+
+/*------------------- Estilos main parte electrica y mecanica -------------------*/
+
+.parte_electrica{
+    width: 90%;
+    max-width: auto;
+    position: relative;
+    margin: 25px auto;
+    padding: 10px 40px;
+    border: 2px solid #96be25;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #96be25;
+}
+
+.parte_mecanica{
+    width: 90%;
+    max-width: auto;
+    margin: 25px auto;
+    padding: 10px 40px;
+    border: 2px solid #96be25;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #96be25;
+}
+
+.parte-validaciones{
+    width: 90%;
+    max-width: auto;
+    margin: 25px auto;
+    padding: 10px 40px;
+    border: 2px solid #96be25;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #96be25;
+}
+
+/*------------------- Estilo lista desplegable -------------------*/
+
+select {
+    width: 65%;
+    height: 50%;
+    border-bottom: 2px solid #96be25;
+    border-bottom:1px solid #2551be;
+    border-right: none;
+    color: #000;
+    font-size: 17px;
+    outline: none;
+    line-height: 15px;
+    padding: 0 0px;
+    display: block;
+    padding: 10px 0;
+    color: #2551be;
+    background: transparent;
+    border-color: transparent;
+    border-bottom:1px solid #2551be;
+    border-right: none;
+   }
+
+.pedidoEquipo {
+    width: 60%;
+    height: 65%;
+    border-bottom: 2px solid #96be25;
+    border-bottom:1px solid #2551be;
+    border-right: none;
+    color: #000;
+    font-size: 17px;
+    outline: none;
+    line-height: 15px;
+    padding: 0 0px;
+    display: block;
+    padding: 10px 0;
+    color: #2551be;
+    background: transparent;
+    border-color: transparent;
+    border-bottom:1px solid #2551be;
+    border-right: none;
+}
+
+/*------------------- Estilos formulario electrico y mecanico -------------------*/
+
+.electrica, .mecanico, .validaciones, .subtitulos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+/*------------------- Estilos formulario label -------------------*/
+
+.formulario_electrico_label{
+    display: block;
+    padding: 10px 0;
+    color: #2551be;
+}
+
+/*------------------- Estilos formulario input -------------------*/
+
+.formulario_electrico_input{
+    position: relative;
+    margin: 10px 0 0 0;
+}
+
+/*------------------- Estilos input -------------------*/
+
+.formulario_input{
+    width: 48%;
+    background: transparent;
+    border-bottom: 2px solid #96be25;
+    background: transparent;
+    border-color: transparent;
+    border-bottom:1px solid #2551be;
+    border-right: none;
+    color: #000;
+    font-size: 17px;
+    outline: none;
+    line-height: 25px;
+    padding: 0 10px;
+    transition: all 1s;
+}
+
+.formulario_input:focus{
+    box-shadow: 0 0 5px #96be25;
+}
+
+/*------------------- Estilos validaciones estados -------------------*/
+
+.formulario_validacion_estado{
+    position: absolute;
+    right: 180px;
+    bottom: 8px;
+    font-size: 16px;
+    opacity: 0;
+    z-index: 1000;
+}
+
+/*------------------- Estilos error -------------------*/
+
+.formulario_input_error{
+    display: none;
+    margin-bottom: 0px;
+}
+
+.formulario_input-error-activo{
+    display: block;
+}
+
+/*------------------- Estilos radio button -------------------*/
+
+.formulario_radio{
+    cursor: pointer;
+    margin: 10px 5px;
+    padding: 5 0px;
+}
+
+.label_radio{
+    padding: 0 5px;
+    font-size: 15px;
+}
+
+.formulario_mensaje, .formulario_btn-enviar{
+    grid-column: span 2;
+    
+}
+
+.imprimir{
+    background: #2551be;
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif,;
+    color: #fff;
+    width: 100px;
+    height: 50px;
+    border-right: none;
+    cursor: pointer;
+    font-style: unset;
+}
+
+.imprimir:hover{
+    background: #96be25;
+}
+/*------------------- Estilos mensaje Error -------------------*/
+
+.formulario_mensaje{
+    display: none;
+    padding: 15px;
+    text-align: center;
+    background: #f00;
+    border-radius: 10px;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*------------------- Estilos b del mensaje de error -------------------*/
+
+b{
+    padding: 0 10px;
+}
+
+/*------------------- Estilos mensaje de exito -------------------*/
+
+.formulario_mensaje-activo{
+    display: block;
+}
+
+.mensaje_exito{
+    display: none;
+    font-size: 2em;
+    color: #96be25;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/*------------------- Estilos boton enviar -------------------*/
+.formulario_btn-enviar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-enviar{
+    padding: 15px 35px;
+    background: #2551be;;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    margin: 5px 10px;
+}
+
+.btn-enviar:hover{
+    background: #96be25;
+    transition: #96be25 1s;
+}
+
+.formulario_mensaje-exito-activo{
+    display: block;
+}
+
+/*------------------- Estilos validaciones -------------------*/
+
+.formulario_correcto{
+    color: #96be25;
+    opacity: 1;
+}
+
+.formulario_incorrecto .fornulario_label{
+    color: #f00;
+}
+
+.formulario_incorrecto .formulario_validacion-estado{
+    color: #f00;
+    opacity: 1;
+}
+
+.formulario_incorrecto .formulario_input{
+    border: 1px solid #f00;
+}
+
+/*------------------- Estilos texArea -------------------*/
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 100%;
+    text-align: justify;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    resize: none;
+}
+
+/*------------------- Estilos pie de pagina -------------------*/
+
+footer{
+    text-align: center;
+    padding: 5px;
+}
+
+.pie-pagina{
+    color: #FFFFFF;
+    font-size: 12px;
+    margin: 20px;
+}
+
+/*------------------- Estilos responsive -------------------*/
+
+@media screen and (max-width: 720px){
+    .electrica, 
+    .mecanico, 
+    .subtitulos, 
+    .cabecera,
+    .logo,
+    .validaciones,
+    .parte_validaciones,
+    .input-padron{
+        grid-template-columns: 1fr;
+    }
+
+    .formulario_mensaje,
+    .btn-enviar,
+    .subtitulos,
+    .cabecera,
+    .logo,
+    .input-padron
+    {
+        grid-template-columns: 1;
+    }
+
+    .electrica, 
+    .mecanico,
+    .parte_validaciones{
+        width: 100%;
+    }
+    
+}
+
+@media print {
+    
+    /*body {
+        transform: scale(0.8); /* Ajusta el valor de escala según sea necesario 
+        transform-origin: top left;
+      }*/
+
+    .navegacion,
+    .subtitulos
+    .parte_electrica {
+      page-break-inside: avoid;
+    }
+  
+    .parte_mecanica,
+    .parte-validaciones {
+      page-break-inside: avoid;
+    }
+}

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Información Técnica Comercial</title>
+</head>
+
+<!--IMAGENES-->
+<section class="navegacion">
+
+    <div class="logo" id="logo">
+        <img src="imagenes/Logo_DEMCO sin fondo.png" alt="Logo Demco Ingenieria" width="250">
+    </div>
+</section>
+
+<!--TITULO-->
+<header>
+    <div class="cabecera">
+
+        <h1>
+            Información Técnica Comercial
+        </h1>
+
+    </div>
+</header>
+
+<!--CUERPO DE LA PAGINA-->
+<body>
+
+    <!--ENCABEZADOS SUBTITULOS-->
+    <section>
+        <div class="subtitulos">
+
+            <label class="label_subtitulos" id="label_subtitulos" for="ot">Orden de Trabajo:</label>
+            <input class="input_subtitulos" id="input_subtitulosot" type="text" name="ot" required size="11"
+                maxlength="5" onkeypress="return validarNumerico(event)">
+
+            <label class="label_subtitulos" id="label_subtitulos" for="item">Itém:</label>
+            <input class="input_subtitulos" id="input_subtitulositem" type="text" name="item" required size="11"
+                maxlength="3" onkeypress="return validarNumerico(event)">
+
+            <label class="label_subtitulos" id="label_subtitulos" for="obra">Proyecto:</label>
+            <input class="input_subtitulos" id="input_subtitulosobra" type="text" name="obra" required size="11">
+
+            <label class="label_subtitulos" id="label_subtitulos" for="tablero">Tablero:</label>
+            <input class="input_subtitulos" id="input_subtitulostablero" type="text" name="tablero" required
+                size="11">
+
+            <label class="label_subtitulos" id="label_subtitulos" for="cliente">Cliente:</label>
+            <input class="input_subtitulos" id="input_subtituloscliente" type="text" name="cliente" required
+                size="11">
+
+            <!--<label class="label_subtitulos" id="label_subtitulos" for="fecha">Fecha:</label>
+            <input class="input_subtitulos" id="input_subtitulos" type="date" id="fecha" name="fecha" readonly>-->
+
+            <label class="label_subtitulos" id="label_subtitulos" for="comercial">Comercial Responsable:</label>
+            <input class="input_subtitulos" id="input_subtituloscomercial" type="text" name="comercial" required
+                size="11">
+
+            <label class="label_subtitulos" id="label_subtitulos" for="analista">Analista Encargado:</label>
+            <input class="input_subtitulos" id="input_subtitulosanalista" type="text" name="analista" required
+                size="11">
+
+        </div>
+    </section>
+
+    <!--PARTE ELECTRICA-->
+    <main class="parte_electrica">
+        <h2 class="titulo_electrico">Información Electrica</h2>
+        <form action="" class="electrica" id="electrica">
+            <!--Tension primaria-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Tensión Principal (V)</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <input class="formulario_input" type="text" name="tensio_p" id="tensio_p" size="11" maxlength="5" onkeypress="return validarNumerico(event)">
+                    <i class="formulario_validacion_estado  fas fa-times-circle"></i><br>
+                    <label class="label_radio" id="label_radio">AC
+                        <input class="formulario_radio" type="radio" name="tension1" value="ac" id="ac">
+                    </label>
+                    <label>DC
+                        <input class="formulario_radio" type="radio" name="tension1" value="dc" id="dc">
+                    </label>
+                    <label>N/A
+                        <input class="formulario_radio" type="radio" name="tension1" value="n/a" id="na" onclick="limpiarCampo()">
+                    </label>
+                </div>
+                <p class="formulario_input_error">El campo debe estar lleno</p>
+            </div>
+
+            <!--Tension secundaria-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Tensión Secundaria (V)</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <input class="formulario_input" type="text" name="tensio_p" id="tensio_s" size="11" maxlength="5" onkeypress="return validarNumerico(event)">
+                    <i class="formulario_validacion_estado  fas fa-times-circle"></i><br>
+                    <label class="label_radio" id="label_radio">AC
+                        <input class="formulario_radio" type="radio" name="tension2" value="ac" id="ac2">
+                    </label>
+                    <label>DC
+                        <input class="formulario_radio" type="radio" name="tension2" value="dc" id="dc2">
+                    </label>
+                    <label>N/A
+                        <input class="formulario_radio" type="radio" name="tension2" value="n/a" id="na1">
+                    </label>
+                </div>
+                <p class="formulario_input_error">El campo debe estar lleno</p>
+            </div>
+
+            <!--Tension control-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Tensión Control (V)</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <input class="formulario_input" type="text" name="tensio_c" id="tensio_c" size="11" maxlength="5" onkeypress="return validarNumerico(event)">
+                    <i class="formulario_validacion_estado  fas fa-times-circle"></i><br>
+                    <label class="label_radio" id="label_radio">AC
+                        <input class="formulario_radio" type="radio" name="tension3" value="ac2" id="acc">
+                    </label>
+                    <label>DC
+                        <input class="formulario_radio" type="radio" name="tension3" value="dc2" id="dcc">
+                    </label>
+                    <label>N/A
+                        <input class="formulario_radio" type="radio" name="tension3" value="n/a2" id="na2">
+                    </label>
+                </div>
+                <p class="formulario_input_error">El campo debe estar lleno</p>
+            </div>
+
+            <!--Numero de fases-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Sistema # Fases</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <label class="label_radio" id="label_radio">1
+                        <input class="formulario_radio" type="radio" name="fases" value="mono" id="mono">
+                    </label>
+                    <label>2
+                        <input class="formulario_radio" type="radio" name="fases" value="bifa" id="bifa">
+                    </label>
+                    <label>3
+                        <input class="formulario_radio" type="radio" name="fases" value="trifa" id="trifa">
+                    </label>
+                    <label>N/A
+                        <input class="formulario_radio" type="radio" name="fases" value="n/a3" id="na3">
+                    </label>
+                </div>
+            </div>
+
+            <!--Numero de hilos-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Sistema # Hilos<br>
+                    <select name="numeoHilos" id="hilos" required>
+                        <option value="hilo"></option>
+                        <option value="1hilo">1</option>
+                        <option value="2hilos">2</option>
+                        <option value="3hilos">3</option>
+                        <option value="4hilos">4</option>
+                        <option value="5hilos">5</option>
+                        <option value="na4">N/A</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--Corriente Nominal-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Corriente Nominal (I)</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <input class="formulario_input" type="text" name="corrienteN" id="corrienteN" size="11"
+                        maxlength="5" onkeypress="return validarNumerico(event)">
+                    <i class="formulario_validacion_estado  fas fa-times-circle"></i><br>
+                    <label class="label_radio" id="label_radio">N/A
+                        <input class="formulario_radio" type="radio" name="in" value="n/a5" id="na5" onclick="limpiarCampo2()">
+                    </label>
+                </div>
+                <p class="formulario_input_error">El campo debe estar lleno</p>
+            </div>
+
+            <!--Corriente de corto-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Corriente Cortocircuito (kA)</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <input class="formulario_input" type="text" name="corrienteC" id="corrienteC" size="11"
+                        maxlength="5" onkeypress="return validarNumerico(event)">
+                    <i class="formulario_validacion_estado  fas fa-times-circle"></i><br>
+                    <label class="label_radio" id="label_radio">N/A
+                        <input class="formulario_radio" type="radio" name="ka" value="n/a6" id="na6" onclick="limpiarCampo3()">
+                    </label>
+                </div>
+                <p class="formulario_input_error">El campo debe estar lleno</p>
+            </div>
+
+            <!--Temperatura-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Temperatura (°c)</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <input class="formulario_input" type="text" name="temperatura" id="temperatura" size="11"
+                        maxlength="5" onkeypress="return validarNumerico(event)">
+                    <i class="formulario_validacion_estado  fas fa-times-circle"></i><br>
+                    <label class="label_radio" id="label_radio">N/A
+                        <input class="formulario_radio" type="radio" name="tem" value="n/a7" id="na7" onclick="limpiarCampo4()">
+                    </label>
+                </div>
+                <p class="formulario_input_error">El campo debe estar lleno</p>
+            </div>
+
+            <!--Iluminacion-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Iluminacion</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <label class="label_radio" id="label_radio">SI
+                        <input class="formulario_radio" type="radio" name="si" value="s" id="s">
+                    </label>
+                    <label>N/A
+                        <input class="formulario_radio" type="radio" name="si" value="n/a8" id="na8">
+                    </label>
+                </div>
+            </div>
+
+            <!--calefaccion-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Calf. Resistencia (W)</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <label class="label_radio" id="label_radio">HIG
+                        <input class="formulario_radio" type="radio" name="hi" value="hig" id="hi">
+                    </label>
+                    <label>TER
+                        <input class="formulario_radio" type="radio" name="hi" value="ter" id="ter">
+                    </label>
+                    <label>N/A
+                        <input class="formulario_radio" type="radio" name="hi" value="n/a9" id="na9">
+                    </label>
+                </div>
+            </div>
+
+            <!--ventilacion-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Ventilacion</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <label class="label_radio" id="label_radio">NAT
+                        <input class="formulario_radio" type="radio" name="venti" value="nat" id="nat">
+                    </label>
+                    <label>FOR
+                        <input class="formulario_radio" type="radio" name="venti" value="for" id="for">
+                    </label>
+                    <label>N/A
+                        <input class="formulario_radio" type="radio" name="venti" value="n/a10" id="na10">
+                    </label>
+                </div>
+            </div>
+
+            <!--Transformadores corriente-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Transformadores corriente<br>
+                    <select class="pedidoEquipo" name="transcorriente" id="trafoCorriente" required>
+                        <option value="transformador"></option>
+                        <option value="1trafo">1</option>
+                        <option value="2trafo">2</option>
+                        <option value="3trafo">3</option>
+                        <option value="4trafo">4</option>
+                        <option value="5trafo">5</option>
+                        <option value="6trafo">6</option>
+                        <option value="na11">N/A</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--Cableado Control-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Cable de Control</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <label class="label_radio" id="label_radio">NOR
+                        <input class="formulario_radio" type="radio" name="cableado" value="nor" id="nor">
+                    </label>
+                    <label>HAL
+                        <input class="formulario_radio" type="radio" name="cableado" value="hal" id="hal">
+                    </label>
+                    <label>N/A
+                        <input class="formulario_radio" type="radio" name="cableado" value="n/a12" id="na12">
+                    </label>
+                </div>
+            </div>
+
+            <!--marca de control-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Marca Control</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <label class="label_radio" id="label_radio">NUM
+                        <input class="formulario_radio" type="radio" name="marcacion" value="num" id="num">
+                    </label>
+                    <label>DES-ORG
+                        <input class="formulario_radio" type="radio" name="marcacion" value="des-org" id="des-org">
+                    </label>
+                    <label>N/A
+                        <input class="formulario_radio" type="radio" name="marcacion" value="n/a13" id="na13">
+                    </label>
+                </div>
+            </div>
+
+            <!--placas-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Tipo Placas<br>
+                    <select class="pedidoEquipo" name="placas" id="tipoPlacas" required>
+                        <option value="placa"></option>
+                        <option value="pDemco">Demco</option>
+                        <option value="pGravoplay">Gravoply</option>
+                        <option value="pInox">Inox</option>
+                        <option value="na14">N/A</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--transferencia-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Modulo Transferencia<br>
+                    <select class="pedidoEquipo" name="transferencia" id="moduloTransferencias">
+                        <option value="moduloTrans"></option>
+                        <option value="Atl">ATL600</option>
+                        <option value="Comap">Comap</option>
+                        <option value="Plc">PLC</option>
+                        <option value="Schneider">UA Schneider</option>
+                        <option value="na15">N/A</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--Cable potencia-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Cable potencia<br>
+                    <select class="pedidoEquipo" name="potencia" id="cables">
+                        <option value="cablePotencia"></option>
+                        <option value="Thhn">THHN</option>
+                        <option value="Flexible">FLEXIBLE</option>
+                        <option value="Cobre">COBRE</option>
+                        <option value="Xlp">XLP</option>
+                        <option value="na16">N/A</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="formulario_mensaje" id="formulario_mensaje">
+                <p><i class="fas fa-times-circle"><b>ERROR:</b> Debes completar todos los campos</i></p>
+            </div>
+        </form>
+    </main>
+
+    <!--PARTE MECANICA-->
+    <main class="parte_mecanica">
+        <h2 class="titulo_electrico">Información Mecanica</h2>
+        <form action="" class="mecanico" id="mecanico">
+
+            <!--Tipo de Tablero-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Tipo Tablero<br>
+                    <select name="lenguajes" id="tableros" required>
+                        <option value="tipo"></option>
+                        <option value="sobre">Sobreponer</option>
+                        <option value="dist">Distribucion</option>
+                        <option value="transf">Transferencia</option>
+                        <option value="condensa">B. Condensadores</option>
+                        <option value="centro">CCM</option>
+                        <option value="medi">Medidores</option>
+                        <option value="celda">C. Medida</option>
+                        <option value="seccio">C. seccionador</option>
+                        <option value="celdatrafo">C. Trafo</option>
+                        <option value="metal">Metalclad</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--Tipo de Lamina-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Tipo Lamina</label><br>
+                    <label class="label_radio" id="label_radio">CR
+                        <input class="formulario_radio" type="radio" name="tlamina" value="cr" id="cr">
+                    </label>
+                    <label>GV
+                        <input class="formulario_radio" type="radio" name="tlamina" value="gv" id="gv">
+                    </label><br>
+                    <label>INOX
+                        <input class="formulario_radio" type="radio" name="tlamina" value="inox" id="inox">
+                    </label>
+                </div>
+            </div>
+
+            <!--Calibre Lamina-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Calibre Lamina<br>
+                    <select name="lenguajes" id="cLamina" required>
+                        <option value="lamina"></option>
+                        <option value="22">16-18</option>
+                        <option value="32">14-16</option>
+                        <option value="45">14-18</option>
+                        <option value="tr">16-12</option>
+                        <option value="rt">14-12</option>
+                        <option value="34">18-12</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--Instalacion grado de proteccion-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Tipo Instalaion (IP)<br>
+                    <select name="lenguajes" id="tInstalacion" required>
+                        <option value="interior"></option>
+                        <option value="20">20</option>
+                        <option value="40">40</option>
+                        <option value="44">44</option>
+                        <option value="54">54</option>
+                        <option value="65">65</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--Tipo Pintura-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Pintura (RAL)</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <input class="formulario_input" type="text" name="pral" id="pral" size="11" maxlength="5" onkeypress="return validarNumerico(event)"><br>
+                    <label class="label_radio" id="label_radio">7032
+                        <input class="formulario_radio" type="radio" name="pintura" value="r7032" id="r7032" onclick="limpiarCampo5()">
+                    </label>
+                    <label>7035
+                        <input class="formulario_radio" type="radio" name="pintura" value="r7035" id="r7035" onclick="limpiarCampo5()">
+                    </label>
+                </div>
+            </div>
+
+            <!--Compartimentacion-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Compartimentacion<br>
+                    <select name="lenguajes" id="comparti" required>
+                        <option value="separacion"></option>
+                        <option value="1">1</option>
+                        <option value="2">2A</option>
+                        <option value="3">2B</option>
+                        <option value="4">3A</option>
+                        <option value="5">3B</option>
+                        <option value="6">4A</option>
+                        <option value="7">4B</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--Tipo chapa gea-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Tipo Chapa (GEA)<br>
+                    <select name="lenguajes" id="tipoChapa" required>
+                        <option value="chapa"></option>
+                        <option value="l">Lujo</option>
+                        <option value="b">Bombin</option>
+                        <option value="d">Doble Ranura</option>
+                        <option value="t">Triangulo</option>
+                        <option value="p">Pivote</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--Zocalo-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Zocalo (mm)</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <input class="formulario_input" type="text" name="medida_zocalo" id="medida_zocalo" size="11"
+                        maxlength="5" onkeypress="return validarNumerico(event)">
+                    <i class="formulario_validacion_estado  fas fa-times-circle"></i><br>
+                    <label class="label_radio" id="label_radio">SI
+                        <input class="formulario_radio" type="radio" name="zocalo" value="si" id="si">
+                    </label>
+                    <label>NO
+                        <input class="formulario_radio" type="radio" name="zocalo" value="no" id="no" onclick="limpiarCampo6()">
+                    </label>
+                </div>
+                <p class="formulario_input_error">El campo debe estar lleno</p>
+            </div>
+
+            <!--tipo Frente Muerto-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Frente Muerto</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <label class="label_radio" id="label_radio">MET
+                        <input class="formulario_radio" type="radio" name="fmuerto" value="met" id="met">
+                    </label>
+                    <label>POL
+                        <input class="formulario_radio" type="radio" name="fmuerto" value="pol" id="pol">
+                    </label>
+                    <label>N/A
+                        <input class="formulario_radio" type="radio" name="fmuerto" value="n/a17" id="na17">
+                    </label>
+                </div>
+            </div>
+
+            <!--Acabado Cobre-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Acabado Cobre (CU)</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <label class="label_radio" id="label_radio">ROJO
+                        <input class="formulario_radio" type="radio" name="acobre" value="rojo" id="rojo">
+                    </label>
+                    <label>TERM
+                        <input class="formulario_radio" type="radio" name="acobre" value="term" id="term">
+                    </label>
+                    <label>ELEC
+                        <input class="formulario_radio" type="radio" name="acobre" value="elec" id="elec">
+                    </label>
+                </div>
+            </div>
+
+            <!--Entrada Cable-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Entrada Cable</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <label class="label_radio" id="label_radio">INF
+                        <input class="formulario_radio" type="radio" name="entrada" value="einferior" id="einferior">
+                    </label>
+                    <label>SUP
+                        <input class="formulario_radio" type="radio" name="entrada" value="esuperior" id="esuperior">
+                    </label>
+                    <label>N/A
+                        <input class="formulario_radio" type="radio" name="entrada" value="n/a18" id="na18">
+                    </label>
+                </div>
+            </div>
+
+            <!--Salida Cable-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Salida Cable</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <label class="label_radio" id="label_radio">INF
+                        <input class="formulario_radio" type="radio" name="salida" value="sinferior" id="isnferior">
+                    </label>
+                    <label>SUP
+                        <input class="formulario_radio" type="radio" name="salida" value="ssuperior" id="ssuperior">
+                    </label>
+                    <label>N/A
+                        <input class="formulario_radio" type="radio" name="salida" value="n/a19" id="na19">
+                    </label>
+                </div>
+            </div>
+
+            <!--Reservas-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Reservas</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <input class="formulario_input" type="text" name="reservas" id="reservas" size="11" maxlength="5" onkeypress="return validarNumerico(event)">
+                    <i class="formulario_validacion_estado  fas fa-times-circle"></i><br>
+                    <label class="label_radio" id="label_radio">Si
+                        <input class="formulario_radio" type="radio" name="reser" value="rsi" id="rsi">
+                    </label>
+                    <label>NO
+                        <input class="formulario_radio" type="radio" name="reser" value="rno" id="rno" onclick="limpiarCampo7()">
+                    </label>
+                </div>
+                <p class="formulario_input_error">Indique la cantidad de reservas</p>
+            </div>
+
+            <!--Tipo Empaque-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Tipo Empaque<br>
+                    <select name="lenguajes" id="empaques" required>
+                        <option value="tipoEmpaque"></option>
+                        <option value="cart">Carton-stres</option>
+                        <option value="gua">Guacal</option>
+                        <option value="ste">Stres</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--Argollas-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Argollas</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <label class="label_radio" id="label_radio">SI
+                        <input class="formulario_radio" type="radio" name="argollas" value="arsi" id="arsi">
+                    </label>
+                    <label>N/A
+                        <input class="formulario_radio" type="radio" name="argollas" value="n/a20" id="na20">
+                    </label>
+                </div>
+            </div>
+
+            <!--Acceso Tablero Obra-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Acceso Tablero Obra<br>
+                    <select name="lenguajes" id="acceso" required>
+                        <option value="tableroObra"></option>
+                        <option value="fro">Frontal</option>
+                        <option value="pos">Posterior</option>
+                        <option value="latIz">Lat. Izq.</option>
+                        <option value="latDe">Lat. Der.</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--Mensaje Error-->
+            <div class="formulario_mensaje" id="formulario_mensaje">
+                <p><i class="fas fa-times-circle"><b>ERROR:</b> Debes completar todos los campos</i></p>
+            </div>
+        </form>
+    </main>
+
+    <!--VALIDACIONES Y OBSERVACIONES-->
+    <main class="parte-validaciones">
+        <h2 class="titulo_electrico">Validación Información y Riesgos</h2>
+        <form action="" class="validaciones" id="validaciones">
+            <!--Unifilar Cliente-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Unifilar Cliente</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <label class="label_radio" id="label_radio">Si
+                        <input class="formulario_radio" type="radio" name="unifilar" value="unisi" id="unisi">
+                    </label>
+                    <label>NO
+                        <input class="formulario_radio" type="radio" name="unifilar" value="unino" id="unico">
+                    </label>
+                </div>
+            </div>
+
+            <!--Ingenieria Detalle-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Ingenieria Detallada</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <label class="label_radio" id="label_radio">Si
+                        <input class="formulario_radio" type="radio" name="inndetallada" value="ingsi" id="ingsi">
+                    </label>
+                    <label>NO
+                        <input class="formulario_radio" type="radio" name="inndetallada" value="ingno" id="ingno">
+                    </label>
+                </div>
+            </div>
+
+            <!--Tiempo Entrega Equipo-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Tiempo Entrega Equipo</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <label class="label_radio" id="label_radio">NORMAL
+                        <input class="formulario_radio" type="radio" name="equipo" value="normal" id="normal">
+                    </label>
+                    <label>LARGO
+                        <input class="formulario_radio" type="radio" name="equipo" value="largo" id="largo">
+                    </label>
+                </div>
+            </div>
+
+            <!--Equipos con Codigo-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label class="formulario_label">Equipos con Codigo</label>
+                <div class="formulario_electrico_input" id="formulario_electrico_input">
+                    <label class="label_radio" id="label_radio">Si
+                        <input class="formulario_radio" type="radio" name="codigo" value="equicosi" id="equicosi">
+                    </label>
+                    <label>NO
+                        <input class="formulario_radio" type="radio" name="codigo" value="equicono" id="equicono">
+                    </label>
+                </div>
+            </div>
+
+            <!--Pedido Equipo-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Pedido Equipo<br>
+                    <select class="pedidoEquipo" name="lenguajes" id="equipop" required>
+                        <option value="pEquipo"></option>
+                        <option value="s">Si</option>
+                        <option value="cs">No</option>
+                        <option value="sv">Sumistra Cliente</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--Norma Construccion-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Norma Construccion<br>
+                    <select class="pedidoEquipo" name="lenguajes" id="norma" required>
+                        <option value="nConstruccion"></option>
+                        <option value="w">EPM</option>
+                        <option value="s">CODENSA</option>
+                        <option value="sds">AFINIA</option>
+                        <option value="are">AIR-E</option>
+                        <option value="emcd">EMCALI</option>
+                        <option value="elh">ELECTROHUILA</option>
+                        <option value="epe#">EEP</option>
+                        <option value="edq">EDEQ</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--Mensaje Error-->
+            <div class="formulario_mensaje" id="formulario_mensaje">
+                <p><i class="fas fa-times-circle"><b>ERROR:</b> Debes completar todos los campos</i></p>
+            </div>
+        </form>
+        <div class="formulario_electrico_label" id="formulario_electrico_label">
+            <label class="formulario_label">Observaciones</label>
+            <div class="formulario_electrico_input" id="formulario_electrico_input">
+                <textarea cols="30" rows="10" id="input-padron" class="input-padron" required></textarea>
+            </div>
+        </div>
+    </main>
+
+    <!--BOTON ENVIAR-->
+    <div class="formulario_btn-enviar">
+        <p class="mensaje_exito" id="mensaje_exito">El formulario se genero correctamente</p>
+        <button class="imprimir" type="submit" onclick="validar()">Imprimir</button>
+    </div>
+
+    <!--PIE DE PAGINA-->
+    <footer>
+        <p class="pie-pagina">&copy Copyright Inte-Soft - 2023</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
