@@ -102,7 +102,7 @@ h2 {
     border-bottom:1px solid #2551be;
     border-right: none;
     color: #000;
-    font-size: 17px;
+    font-size: 14px;
     outline: none;
     line-height: 25px;
     padding: 0 10px;
@@ -391,9 +391,9 @@ footer{
 }
 
 .pie-pagina{
-    color: #FFFFFF;
-    font-size: 12px;
-    margin: 20px;
+    color: #2551be;
+    font-size: 10px;
+    margin: 10px;
 }
 
 /*------------------- Estilos responsive -------------------*/

@@ -13,7 +13,7 @@
 <section class="navegacion">
 
     <div class="logo" id="logo">
-        <img src="imagenes/Logo_DEMCO sin fondo.png" alt="Logo Demco Ingenieria" width="250">
+        <img src="imagenes/Logo_DEMCO sin fondo.png" alt="Logo Demco Ingenieria" width="200">
     </div>
 </section>
 
@@ -91,6 +91,7 @@
                 <p class="formulario_input_error">El campo debe estar lleno</p>
             </div>
 
+            
             <!--Tension secundaria-->
             <div class="formulario_electrico_label" id="formulario_electrico_label">
                 <label class="formulario_label">Tensión Secundaria (V)</label>
@@ -365,6 +366,9 @@
                         <option value="seccio">C. seccionador</option>
                         <option value="celdatrafo">C. Trafo</option>
                         <option value="metal">Metalclad</option>
+                        <option value="metal">Remonte</option>
+                        <option value="metal">Semidirecta</option>
+                        <option value="metal">Sincronismo</option>
                     </select>
                 </label>
             </div>
@@ -401,14 +405,26 @@
 
             <!--Instalacion grado de proteccion-->
             <div class="formulario_electrico_label" id="formulario_electrico_label">
-                <label for="lang">Tipo Instalaion (IP)<br>
-                    <select name="lenguajes" id="tInstalacion" required>
+                <label for="lang">Grado Proteccción (IP)<br>
+                    <select name="lenguajes" id="tIp" required>
                         <option value="interior"></option>
                         <option value="20">20</option>
                         <option value="40">40</option>
                         <option value="44">44</option>
                         <option value="54">54</option>
+                        <option value="55">55</option>
                         <option value="65">65</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--Tipo de Instalacion-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Tipo Instalacion<br>
+                    <select name="lenguajes" id="tInstalacion" required>
+                        <option value="clima"></option>
+                        <option value="Ext">Exterior</option>
+                        <option value="Int">Interior</option>
                     </select>
                 </label>
             </div>
@@ -422,6 +438,9 @@
                         <input class="formulario_radio" type="radio" name="pintura" value="r7032" id="r7032" onclick="limpiarCampo5()">
                     </label>
                     <label>7035
+                        <input class="formulario_radio" type="radio" name="pintura" value="r7035" id="r7035" onclick="limpiarCampo5()">
+                    </label>
+                    <label>N/A
                         <input class="formulario_radio" type="radio" name="pintura" value="r7035" id="r7035" onclick="limpiarCampo5()">
                     </label>
                 </div>
@@ -561,7 +580,7 @@
                         <option value="tipoEmpaque"></option>
                         <option value="cart">Carton-stres</option>
                         <option value="gua">Guacal</option>
-                        <option value="ste">Stres</option>
+                        <option value="ste">Estiba y huecal</option>
                     </select>
                 </label>
             </div>
@@ -692,7 +711,7 @@
         <div class="formulario_electrico_label" id="formulario_electrico_label">
             <label class="formulario_label">Observaciones</label>
             <div class="formulario_electrico_input" id="formulario_electrico_input">
-                <textarea cols="30" rows="10" id="input-padron" class="input-padron" required></textarea>
+                <textarea cols="30" rows="8" id="input-padron" class="input-padron" required></textarea>
             </div>
         </div>
     </main>
@@ -705,7 +724,7 @@
 
     <!--PIE DE PAGINA-->
     <footer>
-        <p class="pie-pagina">&copy Copyright Inte-Soft - 2023</p>
+        <p class="pie-pagina">&copy Copyright Solendev - 2023</p>
     </footer>
 
     <script src="script.js"></script>

@@ -261,8 +261,11 @@ function validar() {
     // Codigo para calibre lamina
     const cLamninas = document.getElementById("cLamina").value;
 
-    // Codigo para tipo instalacion
-    const ip = document.getElementById("tInstalacion").value;
+    // Codigo para tipo grado de proteccion
+    const ip = document.getElementById("tIp").value;
+
+    // Codigo para tipo de instalacion
+    const tins = document.getElementById("tInstalacion").value;
 
     // Codigo para la pintura del tablero
     var pralInput = document.getElementById("pral").value;
@@ -430,7 +433,7 @@ function validar() {
     || tensionAcdc || tensionAcdc2 || tensionAcdc3 || numeroFases === "hilo" || !seleccionado || corrienteNa4 || corrienteNa5
     || tempera || !seleccionado1 || !seleccionado2 || !seleccionado3 || transformadoresC === "transformador" || !seleccionado4
     || !seleccionado5 || tPlacas === "placa" || transferencia === "moduloTrans" || cablesPot === "cablePotencia"
-    || tipoTablero === "tipo" || !seleccionado6 || cLamninas === "lamina" || ip === "interior" || compartimentaciones === "separacion" 
+    || tipoTablero === "tipo" || !seleccionado6 || cLamninas === "lamina" || ip === "interior" || tins === "clima" || compartimentaciones === "separacion" 
     || chapas === "chapa" || !pinturaSeleccionada || !zocaloSeleccionado || !reservaSeleccionado || !frentemuetoSeleccionado
     || !acabadoSeleccionado || !entradaSeleccionado || !salidasSeleccionado || empaqueTipo === "tipoEmpaque" || !argollasSeleccionada
     || tipoAcceso === "tableroObra" || !unifilarSeleccionada || !ingenieraSeleccionada || !equipoSeleccionada || !codigoSeleccionada
