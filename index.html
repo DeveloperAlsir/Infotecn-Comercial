@@ -601,7 +601,7 @@
             <!--Acceso Tablero Obra-->
             <div class="formulario_electrico_label" id="formulario_electrico_label">
                 <label for="lang">Acceso Tablero Obra<br>
-                    <select name="lenguajes" id="acceso" required>
+                    <select class="pedidoEquipo" name="lenguajes" id="acceso" required>
                         <option value="tableroObra"></option>
                         <option value="fro">Frontal</option>
                         <option value="pos">Posterior</option>
@@ -682,6 +682,19 @@
                         <option value="s">Si</option>
                         <option value="cs">No</option>
                         <option value="sv">Sumistra Cliente</option>
+                    </select>
+                </label>
+            </div>
+
+            <!--Pedido Equipo-->
+            <div class="formulario_electrico_label" id="formulario_electrico_label">
+                <label for="lang">Tipo Interconexión<br>
+                    <select class="pedidoEquipo" name="lenguajes" id="equipop" required>
+                        <option value="tInterconexion"></option>
+                        <option value="s">Cable</option>
+                        <option value="cs">Cobre</option>
+                        <option value="sv">Laminilla</option>
+                        <option value="sv">Lam/Cobre</option>
                     </select>
                 </label>
             </div>
